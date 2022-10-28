@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation";
 import Detail from "./pages/v1/Detail";
 import Edit from "./pages/v1/Edit";
 import Home from "./pages/v1/Home";
-import Tambah from "./pages/v2/Tambah";
+import Tambah from "./pages/v1/Tambah";
 import Detailv2 from "./pages/v2/Detail";
 import Editv2 from "./pages/v2/Edit";
 import Homev2 from "./pages/v2/Home";

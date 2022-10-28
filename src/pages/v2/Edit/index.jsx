@@ -9,7 +9,7 @@ const Edit = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v2/product/" + id)
+      .get(process.env.REACT_APP_BASEURL + "/v2/product/" + id)
       .then((res) => {
         setProduct(res.data[0]);
       })
@@ -41,7 +41,7 @@ const handleChangeCheckbox = (e) => {
     e.preventDefault();
     const { name , price, stock, status } = product;
     axios
-    .put("http://localhost:3000/api/v2/product/" + id, {
+    .put(process.env.REACT_APP_BASEURL + "/v2/product/" + id, {
       name,
       price,
       stock,

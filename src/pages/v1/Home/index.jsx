@@ -9,7 +9,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v1/product?name=" + search)
+      .get(process.env.REACT_APP_BASEURL + "/v1/product?name=" + search)
       .then((res) => setProduct(res.data))
       .catch((error) => console.log(error));
   });
@@ -18,7 +18,7 @@ const Home = () => {
     let deleteItem = await window.confirm("Hapus produk ini ?");
     if (deleteItem){
       axios
-        .delete("http://localhost:3000/api/v1/product/"+ _id )
+        .delete(process.env.REACT_APP_BASEURL + "/api/v1/product/"+ _id )
         .then(() => {
           alert("Produk berhasil dihapus")
           window.location.reload();

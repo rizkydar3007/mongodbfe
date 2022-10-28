@@ -12,7 +12,7 @@ const Tambah = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/api/v2/product", {
+      .post(process.env.REACT_APP_BASEURL + "/v2/product", {
         name: name,
         price: Number(price),
         stock: Number(stock),

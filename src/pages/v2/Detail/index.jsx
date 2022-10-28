@@ -9,7 +9,7 @@ const Detail = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v2/product/" + id)
+      .get(process.env.REACT_APP_BASEURL + "/v2/product/" + id)
       .then((res) => setProduct(res.data[0]))
       .catch((error) => console.log(error));
     });
